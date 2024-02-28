@@ -18,7 +18,7 @@ public class ConsultaCnpjApplication {
 
 	@GetMapping("/consultaCnpj")
 	public String consultarCnpj(@RequestParam String cnpj) {
-
+//TODO Adicionar resposta em json se erro
 		if (Util.isCNPJ(cnpj)) {
 			cnpj = Util.cnpjFormater(cnpj);
 			// Faz a chamada para a API externa usando o CNPJ fornecido
